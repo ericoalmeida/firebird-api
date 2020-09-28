@@ -32,6 +32,7 @@
     "@typescript-eslint/parser": "^4.2.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "2.21.2",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "node-firebird": "^0.9.8"
   }
 }
