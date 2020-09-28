@@ -1,7 +1,9 @@
+import { resolve } from 'path';
+
 const databaseOptions = {
   host: 'localhost',
   port: 3050,
-  database: 'database.fdb',
+  database: resolve(__dirname, '..', '..', 'database', 'database.fdb'),
   user: 'SYSDBA',
   password: 'masterkey',
   lowercase_keys: false,
