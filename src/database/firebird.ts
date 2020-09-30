@@ -1,8 +1,16 @@
-import nodeFirebird, { Database, Transaction } from 'node-firebird';
+import nodeFirebird, {
+  ConnectionPool,
+  Database,
+  Transaction,
+} from 'node-firebird';
 import databaseOptions from '@src/settings/database';
 
 class Firebird {
-  public connection = nodeFirebird.pool(5, databaseOptions);
+  private connection: ConnectionPool;
+
+  constructor() {
+    this.connection = nodeFirebird.pool(5, databaseOptions);
+  }
 
   private async databaseConnection(): Promise<Database> {
     const dbConn: Database = await new Promise((reject, resolve) => {
