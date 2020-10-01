@@ -1,6 +1,6 @@
 ## Firebird API
 
-<p align="center">
+<p align="center" backgroud="#303030">
   <a href="https://firebirdsql.org/" target="blank"><img src="https://firebirdsql.org/img/site/firebird.png" width="300" alt="Firebird Logo" /></a>
 </p>
 
