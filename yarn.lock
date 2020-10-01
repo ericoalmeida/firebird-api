@@ -3068,15 +3068,17 @@ fined@^1.0.1:
     object.pick "^1.2.0"
     parse-filepath "^1.0.1"
 
-firebird-knx@^0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/firebird-knx/-/firebird-knx-0.0.7.tgz#7bd35603ee3bc864175bb3ca7aeda2e21af43292"
-  integrity sha512-oMcs8hW4YOwlwXPkEKmTvmprbwNQMiIOKdZCfv7fel0EPuP7Gw+rgvpxSVVBohKwHvQ87HtrG5/vy6PTZg0wOw==
+firebird-knx@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/firebird-knx/-/firebird-knx-0.0.8.tgz#96643bbbe21c7ba7562d6344509e56db47ea40a1"
+  integrity sha512-xStAdmNyOSFQQ3Opf9xjsVHu2G8rDNOeZSfQWTGsbK/ymMLvBkMi/i4XmbBmsESbkQ4TqrHu0+zp9+6mJ0qUEQ==
   dependencies:
+    bluebird "^3.7.2"
     debug "^4.1.1"
     inherits "~2.0.4"
     lodash "^4.17.15"
     node-firebird "^0.8.9"
+    sqlite3 "^5.0.0"
 
 flagged-respawn@^1.0.0:
   version "1.0.1"
