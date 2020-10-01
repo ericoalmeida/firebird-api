@@ -8,6 +8,7 @@
 ![GitHub contributors](https://img.shields.io/github/contributors/ericoalmeida/firebird-api?style=flat-square)
 ![GitHub last commit](https://img.shields.io/github/last-commit/ericoalmeida/firebird-api?style=flat-square)
 ![GitHub language count](https://img.shields.io/github/languages/count/ericoalmeida/firebird-api?style=flat-square)
+![GitHub top language](https://img.shields.io/github/languages/top/ericoalmeida/firebird-api?style=flat-square)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/ericoalmeida/firebird-api?style=flat-square)
 
 ### API REST/Firebird
