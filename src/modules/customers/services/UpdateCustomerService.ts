@@ -1,3 +1,4 @@
+import AppErrors from '@src/errors/AppErrors';
 import { IUpdateCustomerDTO } from '../dtos/IUpdateCustomerDto';
 import { ICustomerRepository } from '../repositories/ICustomerRepository';
 
@@ -12,7 +13,9 @@ export class UpdateCustomerService {
 
     const [customer] = await this.customerRepository.findById(id);
 
-    console.log(customer);
+    if (!customer) {
+      throw new AppErrors('Customer not found', 400);
+    }
 
     const newCustomer = {
       ID: customer.ID,

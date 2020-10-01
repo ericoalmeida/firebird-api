@@ -23,34 +23,50 @@ class CustomersController {
   public async store(request: Request, response: Response): Promise<Response> {
     const { name, email } = request.body;
 
-    await this.createCustomerService.execute({ name, email });
+    try {
+      await this.createCustomerService.execute({ name, email });
 
-    return response.status(201).send();
+      return response.status(201).send();
+    } catch (error) {
+      return response.send(error);
+    }
   }
 
   public async show(request: Request, response: Response): Promise<Response> {
     const { id } = request.params;
 
-    const customer = await this.findCustomerService.execute(id);
+    try {
+      const customer = await this.findCustomerService.execute(id);
 
-    return response.json(customer);
+      return response.json(customer);
+    } catch (error) {
+      return response.status(400).send(error);
+    }
   }
 
   public async update(request: Request, response: Response): Promise<Response> {
     const { id } = request.params;
     const { name, email } = request.body;
 
-    await this.updateCustomerService.execute(id, { name, email });
+    try {
+      await this.updateCustomerService.execute(id, { name, email });
 
-    return response.status(201).send();
+      return response.status(201).send();
+    } catch (error) {
+      return response.status(400).send(error);
+    }
   }
 
   public async delete(request: Request, response: Response): Promise<Response> {
     const { id } = request.params;
 
-    await this.deleteCustomerService.execute(id);
+    try {
+      await this.deleteCustomerService.execute(id);
 
-    return response.status(201).send();
+      return response.status(201).send();
+    } catch (error) {
+      return response.status(400).send(error);
+    }
   }
 }
 

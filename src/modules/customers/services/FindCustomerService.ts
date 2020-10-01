@@ -1,3 +1,4 @@
+import AppErrors from '../../../errors/AppErrors';
 import Customer from '../entities/Customer';
 import { ICustomerRepository } from '../repositories/ICustomerRepository';
 
@@ -6,6 +7,10 @@ export class FindCustomerService {
 
   async execute(id: string): Promise<Customer> {
     const [customer] = await this.customerRepository.findById(id);
+
+    if (!customer) {
+      throw new AppErrors('Customer not found!', 400);
+    }
 
     return customer;
   }
