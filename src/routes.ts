@@ -1,11 +1,10 @@
 import { Router } from 'express';
-import CustomersController from './modules/customers/controllers/CustomersController';
+import customersRoutes from './modules/customers/customers.routes';
 
 const routes = Router();
 
-const customersController = new CustomersController();
+routes.get('/', (request, response) => response.json({ ok: true }));
 
-routes.get('/', (request, response) => response.json({ options: true }));
-routes.get('/customers', customersController.findAll);
+routes.use('/customers', customersRoutes);
 
 export default routes;
