@@ -1,6 +1,6 @@
 ## Firebird API
 
-<p align="center" backgroud="#303030">
+<p align="left" >
   <a href="https://firebirdsql.org/" target="blank"><img src="https://firebirdsql.org/img/site/firebird.png" width="300" alt="Firebird Logo" /></a>
 </p>
 
@@ -11,3 +11,17 @@
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/ericoalmeida/firebird-api?style=flat-square)
 
 ### API REST/Firebird
+
+```shell
+# Clone o repositório
+git clone https://github.com/ericoalmeida/firebird-api.git
+
+# Instale as dependencias com yarn ou npm
+# yarn
+yarn
+#npm
+npm i
+
+#Inicie o servidor
+yarn dev
+```
